@@ -51,6 +51,7 @@ function checkWin(i)  // Checks Victory Conditions!
     return false;
   }
 }
+  
 function checkDouble(box1,box2,number){
   if((boxes.children[box1].className.includes('filled-'+number)) && (boxes.children[box2].className.includes('filled-'+number)))
   {
@@ -81,6 +82,7 @@ function checkIfEmpty(){
   }
   return false;
 }
+
 function randomMove(){
   if(!(checkIfEmpty())){            // Checks if there are any available boxes
     return false;                  // Returns false if not
@@ -92,6 +94,7 @@ function randomMove(){
   moveAi(x);
   return true;
 }
+
 function checkDraw(){  // Checks If it is a draw!
 if(counVar==6 && !(checkWin(1)) && !(checkWin(2))){
   end.className += "-tie"
@@ -102,6 +105,7 @@ if(counVar==6 && !(checkWin(1)) && !(checkWin(2))){
   return true;
   }
 }
+
 function stopWin(number){ //AI function to stop losing or try winning , Checks if User has doubles lined up somewhere
     if(checkDouble(0,1,number) && !(boxes.children[2].className.includes("box-filled")) ){
       moveAi(2);
