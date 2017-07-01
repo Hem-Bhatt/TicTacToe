@@ -213,20 +213,20 @@ function stopWin(number){ //AI function to stop losing or try winning , Checks i
 
 function mouseoutBehaviour(){
   boxes.addEventListener('mouseout',(e)=>{
-    e.target.style.backgroundImage = ""
+    e.target.style.backgroundImage = "";
   });
 }
 
 function player1SvgBehaviour(){
     boxes.addEventListener('mouseover',(e)=>{
-      e.target.style.backgroundImage = "url('img/o.svg')"
+      e.target.style.backgroundImage = "url('img/o.svg')";
   });
   mouseoutBehaviour();
 }
 
 function player2SvgBehaviour(){
     boxes.addEventListener('mouseover',(e)=>{
-      e.target.style.backgroundImage = "url('img/x.svg')"
+      e.target.style.backgroundImage = "url('img/x.svg')";
     });
     mouseoutBehaviour();
 }
@@ -268,7 +268,7 @@ boxes.addEventListener('click',(e)=>{               // Event handler if any box 
     end.className += "-one"
     start.style.visibility = "hidden";
     board.style.visibility = "hidden";
-    end.style.visibility = "visible"
+    end.style.visibility = "visible";
     finalMessage.text("Awesome! "+name.value+" ,you win!!");
   }
   checkDraw();  // Since Draw can happen only after player 1 has moved
@@ -278,7 +278,7 @@ boxes.addEventListener('click',(e)=>{               // Event handler if any box 
       end.className += "-two"
       start.style.visibility = "hidden";
       board.style.visibility = "hidden";
-      end.style.visibility = "visible"
+      end.style.visibility = "visible";
       finalMessage.text("SORRY YOU LOSE :( !!!");
     }
   },1000);                 // AI Response time can be changed with this!
